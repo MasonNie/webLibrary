@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Services;
 using System.Web.SessionState;
 
-namespace WebStore
+namespace webLibrary
 {
     /// <summary>
     /// YanZhengMa 的摘要说明
