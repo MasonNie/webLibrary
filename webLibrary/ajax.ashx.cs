@@ -26,7 +26,7 @@ namespace webLibrary
                 }
                 else
                 {
-                    int b = (int)SqlHelper.ExecuteScalar("select Count(*) from yongHu where userid=@userid", 
+                    int b = (int)SqlHelper.ExecuteScalar("select Count(*) from yongHu where userId=@userid", 
                         new SqlParameter("@userid", userName));//异步查找该用户名是否存在
                     if (b < 1)
                     {
@@ -60,7 +60,7 @@ namespace webLibrary
                     }
                     else
                     {
-                        DataTable dt = SqlHelper.ExecuteDataTable("select * from yongHu where password=@password and userid=@userid"
+                        DataTable dt = SqlHelper.ExecuteDataTable("select * from yongHu where password=@password and userId=@userid"
                         , new SqlParameter("@password", password)
                         , new SqlParameter("@userid", userName));
                         if (dt.Rows.Count < 1)

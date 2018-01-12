@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="ajax.ashx.cs" Class="WebStore.ajax" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="ajax.ashx.cs" Class="webLibrary.ajax" %>
