@@ -76,7 +76,7 @@ namespace webLibrary
         {
             Random ran = new Random();
             //选择画10条线,也可以增加，也可以不要线，只要随机杂点即可
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 64; i++)
             {
                 int x1 = ran.Next(img.Width);
                 int y1 = ran.Next(img.Height);
@@ -97,11 +97,13 @@ namespace webLibrary
             }
              */
             Random ran = new Random();
-            int col = ran.Next();//在一次的图片中杂店颜色相同
-            for (int i = 0; i < 100; i++)
+           // int col = ran.Next();//在一次的图片中杂店颜色相同
+            for (int i = 0; i < 128; i++)
             {
+
                 int x = ran.Next(img.Width);
                 int y = ran.Next(img.Height);
+                int col = ran.Next();//在一次的图片中杂店颜色相同
                 img.SetPixel(x, y, Color.FromArgb(col));
             }
         }

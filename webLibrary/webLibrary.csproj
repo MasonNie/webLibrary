@@ -110,7 +110,8 @@
     <Content Include="scripts\piroBox.1_2.js" />
     <Content Include="scripts\slideitmoo-1.1.js" />
     <Content Include="templates\denglu.html" />
-    <Content Include="test.ashx" />
+    <Content Include="templates\oldbook.html" />
+    <Content Include="userCenter.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -120,7 +121,9 @@
     <Content Include="yanZhengMa.ashx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ajax.ashx.cs">
@@ -129,8 +132,8 @@
     <Compile Include="CommonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
-    <Compile Include="test.ashx.cs">
-      <DependentUpon>test.ashx</DependentUpon>
+    <Compile Include="userCenter.ashx.cs">
+      <DependentUpon>userCenter.ashx</DependentUpon>
     </Compile>
     <Compile Include="yanZhengMa.ashx.cs">
       <DependentUpon>yanZhengMa.ashx</DependentUpon>

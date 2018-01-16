@@ -58,7 +58,7 @@ margin-left:105px;}
     margin: -461px 15px 70px 440px;
 	border: 1px solid #CCC;
 	border-radius: 5px;
-	background:url(../img/1.jpg)
+	background:url(/img/1.jpg)
 }*/
 .rr{
 	width:28%;
@@ -137,7 +137,7 @@ button {
    
 	
     padding: 0;
-    background:#C7CFC5;
+    background:#f18807;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
