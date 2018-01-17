@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>古籍查阅</title>
+    <title>图书百度界面</title>
 
     <link href="../css/style.css" rel="stylesheet" />
     <link rel="Shortcut Icon" href="/img/11.jpg" />
@@ -12,59 +12,55 @@
     <div class="all">
         <div class="head">
             <div class="logo">
-                <img src="/img/12.jpg" width="93%" />
-            </div>
+                <h1 style="text-align:center">图书搜索</h1></div>
         </div>
 
         <div class="content">
             <div class="exit"><a href="/templates/denglu.html">注销</a></div>
-            <div class="bk40"></div>
             <div class="search">
-                <form action="/Select.ashx" method="get">
-                    <input type="text" name="search" class="s1" placeholder="search..." width="100%" />
+                <form action="/so.ashx" method="get">
+                    <input type="text" name="search" class="s1" placeholder="请输入搜索内容..." />
                     <button class="bt" type="submit" value="搜索"  alt="Search" title="Search" style="border:none; ">搜索</button>
                     <input type="hidden" name="Logo" value="Logo" />
                 </form>
 
             </div>
-            <div class="bk41"></div>
             <div class="result">
-                <table border="1" width="95%" align="center">
+                <table border="1" width="95%" align="center" >
                     <tr height="40px">
-                        <td>分书名</td>
-                        <td>题名</td>
+                        <td>图书ID</td>
+                        <td>书名</td>
                         <td>isbn</td>
-                        <td>索书号</td>
+                        <td>语言</td>
                         <td>著者</td>
-                        <td>出版社</td>
-                        <td>主题词</td>
+                        <td>图书类别</td>
+                        <td>翻译</td>
                     </tr>
                     #foreach($book in $Data.Books)
                     <tr height="40px">
-                        <td>$book.FenShuMing</td>
-                        <td>$book.Title</td>
-                        <td>$book.isbn</td>
-                        <td>$book.indexNumber</td>
-                        <td>$book.author</td>
-                        <td>$book.publishers</td>
-                        <td>$book.topicWords</td>
+                        <td>$book.BookId</td>
+                        <td>$book.BookName</td>
+                        <td>$book.isbs</td>
+                        <td>$book.language</td>
+                        <td>$book.Author</td>
+                        <td>$book.BooktypeName</td>
+                        <td>$book.Translator</td>
                     </tr>
                     #end
                 </table>
-                <div class="next">
-                    #foreach($page in $Data.Fen)
-                    <a href="$page.Href">$page.Title</a>
-                    #end
-                </div>
+                <!-- <div class="next">
+        #foreach($page in $Data.Fen)
+        <a href="$page.Href">$page.Title</a>
+        #end
+    </div>-->
             </div>
 
         </div>
 
 
 
-        <div class="bk44"></div>
         <div class="foot">
-            <div class="our"><p align="center">联系我们：B3 412 实验班</p></div>
+            <div class="our"><p align="center"></p></div>
         </div>
     </div>
     

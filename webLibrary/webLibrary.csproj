@@ -73,6 +73,8 @@
     <None Include="packages.config" />
     <Content Include="css\ddsmoothmenu.css" />
     <Content Include="css\lightbox.css" />
+    <Content Include="css\so.css" />
+    <Content Include="img\search.png" />
     <Content Include="css\style.css" />
     <Content Include="css\styles.css" />
     <Content Include="css\templatemo_style.css" />
@@ -95,7 +97,6 @@
     <Content Include="img\6.gif" />
     <Content Include="img\8.jpg" />
     <Content Include="img\9.jpg" />
-    <Content Include="img\XiuGai.css" />
     <Content Include="scripts\ajax.js" />
     <Content Include="scripts\ddsmoothmenu.js" />
     <None Include="scripts\jquery-1.7.1.intellisense.js" />
@@ -110,8 +111,9 @@
     <Content Include="scripts\piroBox.1_2.js" />
     <Content Include="scripts\slideitmoo-1.1.js" />
     <Content Include="templates\denglu.html" />
-    <Content Include="templates\oldbook.html" />
+    <Content Include="templates\book.html" />
     <Content Include="userCenter.ashx" />
+    <Content Include="so.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -131,6 +133,9 @@
     </Compile>
     <Compile Include="CommonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="so.ashx.cs">
+      <DependentUpon>so.ashx</DependentUpon>
+    </Compile>
     <Compile Include="SqlHelper.cs" />
     <Compile Include="userCenter.ashx.cs">
       <DependentUpon>userCenter.ashx</DependentUpon>
