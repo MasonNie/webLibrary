@@ -44,7 +44,8 @@ namespace webLibrary
                                     isbs like @keyword or
                                     Author like @keyword or
                                     BookTypeName like @keyword or
-                                    PinYinCode like @keyword"
+                                    PinYinCode like @keyword or
+                                    Translater like @keyword"
                     , new SqlParameter("@keyWord",  keyword )
                     );//分开从数据库中拿取数据
 
@@ -60,7 +61,7 @@ namespace webLibrary
                 if (table.Rows.Count < 1)
                 {
                     //说明没有拿到一条数据，即没有搜到结果
-                    string html = CommonHelper.RenderHtml("error.html", null);
+                    string html = CommonHelper.RenderHtml("book.html", null);
                     context.Response.Write(html);
                 }
                 else

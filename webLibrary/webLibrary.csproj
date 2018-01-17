@@ -112,6 +112,7 @@
     <Content Include="scripts\slideitmoo-1.1.js" />
     <Content Include="templates\denglu.html" />
     <Content Include="templates\book.html" />
+    <Content Include="templates\userCenter.html" />
     <Content Include="userCenter.ashx" />
     <Content Include="so.ashx" />
     <None Include="Web.Debug.config">
