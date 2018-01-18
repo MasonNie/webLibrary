@@ -49,7 +49,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NVelocity">
-      <HintPath>..\..\WebApplication3\bin\NVelocity.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\NVelocity.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -70,9 +70,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ajax.ashx" />
-    <None Include="packages.config" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.js" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min.js" />
     <Content Include="css\ddsmoothmenu.css" />
     <Content Include="css\lightbox.css" />
+    <Content Include="css\npm.js" />
     <Content Include="css\so.css" />
     <Content Include="img\search.png" />
     <Content Include="css\style.css" />
@@ -97,6 +110,7 @@
     <Content Include="img\6.gif" />
     <Content Include="img\8.jpg" />
     <Content Include="img\9.jpg" />
+    <Content Include="img\timg.jpg" />
     <Content Include="scripts\ajax.js" />
     <Content Include="scripts\ddsmoothmenu.js" />
     <None Include="scripts\jquery-1.7.1.intellisense.js" />
@@ -112,7 +126,9 @@
     <Content Include="scripts\slideitmoo-1.1.js" />
     <Content Include="templates\denglu.html" />
     <Content Include="templates\book.html" />
-    <Content Include="templates\userCenter.html" />
+
+    <Content Include="templates\details.html" />
+
     <Content Include="userCenter.ashx" />
     <Content Include="so.ashx" />
     <None Include="Web.Debug.config">
