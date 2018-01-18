@@ -126,10 +126,8 @@
     <Content Include="scripts\slideitmoo-1.1.js" />
     <Content Include="templates\denglu.html" />
     <Content Include="templates\book.html" />
-
     <Content Include="templates\details.html" />
-
-    <Content Include="userCenter.ashx" />
+    <Content Include="details.ashx" />
     <Content Include="so.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -154,8 +152,8 @@
       <DependentUpon>so.ashx</DependentUpon>
     </Compile>
     <Compile Include="SqlHelper.cs" />
-    <Compile Include="userCenter.ashx.cs">
-      <DependentUpon>userCenter.ashx</DependentUpon>
+    <Compile Include="details.ashx.cs">
+      <DependentUpon>details.ashx</DependentUpon>
     </Compile>
     <Compile Include="yanZhengMa.ashx.cs">
       <DependentUpon>yanZhengMa.ashx</DependentUpon>

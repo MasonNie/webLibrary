@@ -45,7 +45,7 @@ namespace webLibrary
                                     Author like @keyword or
                                     BookTypeName like @keyword or
                                     PinYinCode like @keyword or
-                                    Translater like @keyword"
+                                    Translator like @keyword"
                     , new SqlParameter("@keyWord",  keyword )
                     );//分开从数据库中拿取数据
 
