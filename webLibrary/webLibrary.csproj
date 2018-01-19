@@ -124,11 +124,12 @@
     <Content Include="scripts\mootools-1.2.1-core.js" />
     <Content Include="scripts\piroBox.1_2.js" />
     <Content Include="scripts\slideitmoo-1.1.js" />
-    <Content Include="templates\denglu.html" />
+    <Content Include="templates\signIn.html" />
     <Content Include="templates\book.html" />
     <Content Include="templates\details.html" />
     <Content Include="details.ashx" />
     <Content Include="so.ashx" />
+    <Content Include="signOut.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,6 +149,9 @@
     </Compile>
     <Compile Include="CommonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signOut.ashx.cs">
+      <DependentUpon>signOut.ashx</DependentUpon>
+    </Compile>
     <Compile Include="so.ashx.cs">
       <DependentUpon>so.ashx</DependentUpon>
     </Compile>

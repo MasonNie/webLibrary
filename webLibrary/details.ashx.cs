@@ -20,7 +20,7 @@ namespace webLibrary
             string IdentityCard = context.Session["IdentityCard"] + "";
             if (string.IsNullOrEmpty(IdentityCard))
             {
-                context.Response.Redirect("templates/denglu.html");
+                context.Response.Redirect("templates/signIn.html");
             }
             DataTable dt1 = SqlHelper.ExecuteDataTable("select ReaderName,IdentityCard from reader where IdentityCard=@IdentityCard",
                 new SqlParameter("@IdentityCard", IdentityCard));
