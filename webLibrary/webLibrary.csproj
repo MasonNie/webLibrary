@@ -111,6 +111,7 @@
     <Content Include="img\8.jpg" />
     <Content Include="img\9.jpg" />
     <Content Include="img\timg.jpg" />
+    <Content Include="index.html" />
     <Content Include="scripts\ajax.js" />
     <Content Include="scripts\ddsmoothmenu.js" />
     <None Include="scripts\jquery-1.7.1.intellisense.js" />

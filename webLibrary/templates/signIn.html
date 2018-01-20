@@ -79,7 +79,7 @@
                     //$("#TiShi").slideDown().delay(2000).slideUp();
                 }
                 else if (resTex == "succeed") {
-                    var a = "/details.ashx";
+                    var a = "/so.ashx";
                     window.location.href = a;
                 }
                 else {
@@ -93,36 +93,68 @@
 </head>
 
 <body>
-    <div class="all">
+    <div class="all" style="margin-top:200px;">
         <div class="page-container">
 
-            <h1>学生登录</h1>
-            
-                <div class="r1">
-                    <p class="rr">学生证号：</p>
-                    <input type="text" name="user" id="user" class="username form-control" placeholder="请输入学生证号！" onblur="checkUserName()" />
-                </div>
-                <div class="k1" id="usererror"></div>
-                <div class="r1">
-                    <p class="rr">密码：</p>
-                    <input type="password" name="newpassword" id="newpassword" class="username1 form-control" placeholder="请输入密码！"/>
-                </div>
-                <div class="k1" id="passworderror"></div>
-                <div class="r2">
-                    <div class="yanzheng">
-                        <p class="rr1">验证码：</p>
-                        <input type="text" name="chkinfo" id="chkinfo" class="Captcha form-control" placeholder="请输入验证码！" />
+            <h1 style="margin-left:-400px;">学生登录<div></div></h1>
 
-                    </div>
-                    <div class="bk42">
-                        <img src="/yanZhengMa.ashx" alt="点击换一张" width="126px" height="39px" onclick="getimg()" id="chkimg" />
-                    </div>
-                </div>
-                <div class="k2" id="yanzhengma"></div>
-                <div class="anniu"><button type="submit" class="submit_button" onclick="denglu()" value="登录"> 登录</button></div>
+            <div class="r1">
+                <p class="rr">学生证号：</p>
+                <input type="text" style="border:0px;background:rgba(148, 131, 131, 0.39);margin-top:10px;color: white;" name="user" id="user" class="username form-control" placeholder="请输入学生证号！" onblur="checkUserName()" />
+            </div>
+            <div class="k1" id="usererror"  style="float:right;margin-right:150px;"></div>
+            <div class="r1">
+                <p class="rr">密码：</p>
+                <input type="password" style="border:0px;background:rgba(148, 131, 131, 0.39);margin-top:10px;color: white;" name="newpassword" id="newpassword" class="username1 form-control" placeholder="请输入密码！" />
+            </div>
+            <div class="k1" id="passworderror"  style="float:right;margin-right:150px;"></div>
+            <div class="r2" style="float:left;">
+                <div class="yanzheng" style="width:250px;float:left;margin-top:5px;">
+                    <p class="rr1" style="float:left;margin-left:-15px;margin-top:15px;">验证码：</p>
+                    <input name="chkinfo" style="width:200px;border:0px;background:rgba(148, 131, 131, 0.39);margin-top:10px;color: white;margin-right:10px" id="chkinfo" class="Captcha form-control" placeholder="请输入验证码！" type="text">
 
-                <div class="error"><span>+</span></div>
-           
+                </div>
+                <div class="bk42" style="float:right;margin-top:10px;">
+                    <img src="/yanZhengMa.ashx" alt="点击换一张" onclick="getimg()" id="chkimg" width="126px" height="39px">
+                </div>
+            </div>
+            <div class="k2" id="yanzhengma" style="margin-right:150px;margin-top:18px;float:right;"></div>
+            <div class="anniu" style="width:350px;">
+                <button style="  cursor: pointer;
+    width: 100px;
+    height: 44px;
+	margin-top:20px;
+               margin-left:-15px;
+    padding: 0;
+    background:#f18807;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px groove  #44B1B7;
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;font-family:Microsoft YaHei,Segoe UI,Tahoma,Arial,Verdana,sans-serif; text-decoration:none; width:100%;font-size:24px; letter-spacing:15px;" type="submit" class="submit_button" onclick="denglu()" value="登录">
+                    登录
+                </button>
+            </div>
+
+            <div class="error"><span>+</span></div>
+
         </div>
 
 

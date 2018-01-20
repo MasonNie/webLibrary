@@ -46,7 +46,7 @@ namespace webLibrary
                                     BookTypeName like @keyword or
                                     PinYinCode like @keyword or
                                     Translator like @keyword"
-                    , new SqlParameter("@keyWord",  keyword )
+                    , new SqlParameter("@keyWord",  "%"+keyword+"%" )
                     );//分开从数据库中拿取数据
 
                 //                DataTable table = SqlHelper.ExecuteDataTable(@"select * from Books where 
