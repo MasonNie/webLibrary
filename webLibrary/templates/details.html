@@ -30,13 +30,13 @@
 <body>
     <nav class="navbar navbar-default navbar-inverse navbar-static-top">
         <div class="container">
-            <p class="navbar-text navbar-right"><a href="#" class="navbar-link">注销</a></p>
+            <p class="navbar-text navbar-right"><a href="signOut.ashx" class="navbar-link">注销</a></p>
             <p class="navbar-text navbar-right"><a href="#" class="navbar-link">借阅情况</a></p>
 
         </div>
     </nav>
     <div width="1170px" margin-left="80px">
-        <h1>个人借阅详情 <small>读者姓名 学号</small></h1>
+        <h1>个人借阅详情 <small>姓名：$Data.reader.readerName        学号：$Data.reader.IdentityCard</small></h1>
     </div>
     <div  align="center">
         <table class="table table-hover table-striped">
@@ -47,13 +47,15 @@
                 <td>应还日期</td>
                 <td>续借次数</td>
             </tr>
+            #foreach($borrows in $Data.borrows)
             <tr>
-                <td>计算机组成</td>
-                <td>宋鑫</td>
-                <td>借书日期</td>
-                <td>应还日期</td>
-                <td>5</td>
+                <td>$borrows.BookName</td>
+                <td>$borrows.Author</td>
+                <td>$borrows.BorrowTime</td>
+                <td>$borrows.ReturnTime</td>
+                <td>$borrows.RenewCount</td>
             </tr>
+            #end
             <tr>
                 <td>操作系统</td>
                 <td>王苗</td>

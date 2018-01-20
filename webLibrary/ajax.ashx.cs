@@ -73,7 +73,7 @@ namespace webLibrary
                             //这里面没有对Count>1做处理是因为没有必要
                             //这只是一个搜索的功能用户名和密码都可以重复
                             context.Response.Write("succeed");
-                            context.Session["usrid"] = userName;
+                            context.Session["IdentityCard"] = userName;
                             return;
                         }
                     }

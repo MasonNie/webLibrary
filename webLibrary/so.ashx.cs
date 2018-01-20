@@ -11,7 +11,7 @@ namespace webLibrary
     /// <summary>
     /// Select 的摘要说明
     /// </summary>
-    public class Select : IHttpHandler
+    public class Select : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -45,7 +45,7 @@ namespace webLibrary
                                     Author like @keyword or
                                     BookTypeName like @keyword or
                                     PinYinCode like @keyword or
-                                    Translater like @keyword"
+                                    Translator like @keyword"
                     , new SqlParameter("@keyWord",  keyword )
                     );//分开从数据库中拿取数据
 
@@ -62,6 +62,7 @@ namespace webLibrary
                 {
                     //说明没有拿到一条数据，即没有搜到结果
                     string html = CommonHelper.RenderHtml("book.html", null);
+                    context.Response.Write("<script type='text/javascript'>alert('有毛病？乱点什么');</script>");
                     context.Response.Write(html);
                 }
                 else
