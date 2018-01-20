@@ -124,6 +124,7 @@
     <Content Include="scripts\mootools-1.2.1-core.js" />
     <Content Include="scripts\piroBox.1_2.js" />
     <Content Include="scripts\slideitmoo-1.1.js" />
+
     <Content Include="templates\signIn.html" />
     <Content Include="templates\book.html" />
     <Content Include="templates\details.html" />
