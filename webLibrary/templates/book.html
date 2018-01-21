@@ -15,7 +15,7 @@
         function cheak() {
             var text = $("#search").val() + "";
             if (text == "") {
-                alert('空着搞毛');
+                alert('查询内容不能为空');
                 return false;
             }
             else return true;
@@ -80,7 +80,7 @@
                     <form action="/so.ashx" method="post" onsubmit="return cheak()">
                         <input class="form-control" style="float:left;width:150px;" id="search" name="search" placeholder="请输入搜索内容.." type="text" />
                         <span class="input-group-btn">
-                            <button style="float:right;margin-top: unset;" class="bt btn btn-default" type="submit" value="搜索" alt="Go!" title="Go!">Go!</button>
+                            <button style="float:right;margin-top: unset;width: 100px;" class="bt btn btn-default" type="submit" value="搜索" alt="Go!" title="Go!">Go!</button>
                             <input name="Logo" value="Logo" type="hidden" />
                         </span>
                     </form>

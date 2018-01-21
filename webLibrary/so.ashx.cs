@@ -44,14 +44,14 @@ namespace webLibrary
                   */
                 DataTable rdr = SqlHelper.ExecuteDataTable("select ReaderName,IdentityCard from reader where IdentityCard=@IdentityCard",
               new SqlParameter("@IdentityCard", IdentityCard));
-                if (string.IsNullOrEmpty(keyword))
+              /*  if (string.IsNullOrEmpty(keyword))
                 {
                     var data = new { Books = "", reader = rdr.Rows[0] };
                     string html = CommonHelper.RenderHtml("book.html", data);
                     context.Response.Write(html);
-                }
-                else
-                {
+                }*/
+                //else
+                //{
                     DataTable table = SqlHelper.ExecuteDataTable(@"select * from 
                                    (select BookInfo.*,BookTypeName from bookinfo,BookType where 
                                    (bookInfo.BookTypeId=BookType.BookTypeId)) as A WHERE 
@@ -77,7 +77,7 @@ namespace webLibrary
                         string html = CommonHelper.RenderHtml("book.html", data);
                         context.Response.Write(html);
                     }
-                }
+                //}
 
 
             }

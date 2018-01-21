@@ -27,7 +27,7 @@
         $(document).ready(function () {
             getimg();
         });
-        function getimg() {//我获取验证码
+        function getimg() {//获取验证码
             document.getElementById("chkimg").src = "/yanZhengMa.ashx?" + Math.random();
         }
     </script>
@@ -96,18 +96,18 @@
     <div class="all" style="margin-top:200px;">
         <div class="page-container">
 
-            <h1 style="margin-left:-400px;">学生登录<div></div></h1>
+            <h1 style="margin-left:-40%;">学生登录<div></div></h1>
 
             <div class="r1">
                 <p class="rr">学生证号：</p>
                 <input type="text" style="border:0px;background:rgba(148, 131, 131, 0.39);margin-top:10px;color: white;" name="user" id="user" class="username form-control" placeholder="请输入学生证号！" onblur="checkUserName()" />
             </div>
-            <div class="k1" id="usererror"  style="float:right;margin-right:150px;"></div>
+            <div class="k1" id="usererror"  style="float:left;margin-right:10px;"></div>
             <div class="r1">
                 <p class="rr">密码：</p>
                 <input type="password" style="border:0px;background:rgba(148, 131, 131, 0.39);margin-top:10px;color: white;" name="newpassword" id="newpassword" class="username1 form-control" placeholder="请输入密码！" />
             </div>
-            <div class="k1" id="passworderror"  style="float:right;margin-right:150px;"></div>
+            <div class="k1" id="passworderror"  style="float:left;margin-right:10px;"></div>
             <div class="r2" style="float:left;">
                 <div class="yanzheng" style="width:250px;float:left;margin-top:5px;">
                     <p class="rr1" style="float:left;margin-left:-15px;margin-top:15px;">验证码：</p>
@@ -118,7 +118,7 @@
                     <img src="/yanZhengMa.ashx" alt="点击换一张" onclick="getimg()" id="chkimg" width="126px" height="39px">
                 </div>
             </div>
-            <div class="k2" id="yanzhengma" style="margin-right:150px;margin-top:18px;float:right;"></div>
+            <div class="k2" id="yanzhengma" style="margin-right:10px;margin-top:18px;float:left;"></div>
             <div class="anniu" style="width:350px;">
                 <button style="  cursor: pointer;
     width: 100px;

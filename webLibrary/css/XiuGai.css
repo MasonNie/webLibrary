@@ -30,7 +30,7 @@ body {
 .page-container {
     width: 100%;
     height: auto;
-    margin: 20px auto 0 200px;
+    margin: 20px auto 0 30%;
 }
 /*加字*/
 
@@ -83,7 +83,7 @@ body {
     color: #FFF;
     margin-top: 15px;
     float: right;
-    margin-right: 250px;
+    /*margin-right: 250px;*/
     text-align: center;
     line-height: -moz-block-height;
     h1
