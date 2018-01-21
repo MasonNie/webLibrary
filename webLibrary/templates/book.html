@@ -5,64 +5,152 @@
     <title>图书百度界面</title>
 
     <link href="../css/style.css" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../css/bootstrap.js"></script>
+    <script type="text/javascript" src="../css/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../css/npm.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        function cheak() {
+            var text = $("#search").val() + "";
+            if (text == "") {
+                alert('空着搞毛');
+                return false;
+            }
+            else return true;
+        }
+    </script>
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
     <link rel="Shortcut Icon" href="/img/11.jpg" />
+
+    <style type="text/css">
+        .h1, h1 {
+            font-size: 30px;
+            width: 500px;
+            margin-left: 80px;
+        }
+
+        .table {
+            width: 80%;
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="all">
-        <div class="head">
-            <div class="logo">
-                <h1 style="text-align:center">图书搜索</h1></div>
-        </div>
 
-        <div class="content">
-            <div class="exit"><a href="details.ashx">个人中心</a>              <a href="/signOut.ashx">注销</a></div>
-            <div class="search">
-                <form action="/so.ashx" method="get">
-                    <input type="text" name="search" class="s1" placeholder="请输入搜索内容..." />
-                    <button class="bt" type="submit" value="搜索"  alt="Search" title="Search" style="border:none; ">搜索</button>
-                    <input type="hidden" name="Logo" value="Logo" />
-                </form>
-
-            </div>
-            <div class="result">
-                <table border="1" width="95%" align="center" >
-                    <tr height="40px">
-                        <td>图书ID</td>
-                        <td>书名</td>
-                        <td>isbn</td>
-                        <td>语言</td>
-                        <td>著者</td>
-                        <td>图书类别</td>
-                        <td>翻译</td>
-                    </tr>
-                    #foreach($book in $Data.Books)
-                    <tr height="40px">
-                        <td>$book.BookId</td>
-                        <td>$book.BookName</td>
-                        <td>$book.isbs</td>
-                        <td>$book.language</td>
-                        <td>$book.Author</td>
-                        <td>$book.BooktypeName</td>
-                        <td>$book.Translator</td>
-                    </tr>
-                    #end
-                </table>
-                <!-- <div class="next">
-        #foreach($page in $Data.Fen)
-        <a href="$page.Href">$page.Title</a>
-        #end
-    </div>-->
-            </div>
+    <nav class="navbar navbar-default navbar-inverse navbar-static-top">
+        <div class="container">
+            <p class="navbar-text navbar-right"><a href="/signOut.ashx" class="navbar-link">注销</a></p>
+            <p class="navbar-text navbar-right"><a href="details.ashx" class="navbar-link">借阅情况</a></p>
 
         </div>
-
-
-
-        <div class="foot">
-            <div class="our"><p align="center"><ul></ul></p></div>
-        </div>
+    </nav>
+    <div style="width:500px;margin-left:80px;float:left;">
+        <h1>图书搜索 <small>读者姓名：$Data.reader.readerName 学号：$Data.reader.IdentityCard</small></h1>
     </div>
-    
+
+    <div>
+        <!--<div class="head">
+        <div class="logo">
+            <h1 style="text-align:center">图书搜索</h1>
+        </div>
+    </div>-->
+
+        <div class="content" style="float:right;margin-right:300px;margin-top: 25px;width:200px;">
+            <!--<div class="exit"><a href="/templates/denglu.html">注销</a></div>-->
+            <!--<div class="search">
+            <form action="/so.ashx" method="get">
+                <input type="text" name="search" class="s1" placeholder="请输入搜索内容..." />
+                <button class="bt" type="submit" value="搜索" alt="Search" title="Search" style="border:none; ">搜索</button>
+                <input type="hidden" name="Logo" value="Logo" />
+            </form>
+
+        </div>-->
+
+            <div class="col-lg-6" style="width:1100px;margin-right:100px;">
+                <div class="input-group">
+                    <form action="/so.ashx" method="post" onsubmit="return cheak()">
+                        <input class="form-control" style="float:left;width:150px;" id="search" name="search" placeholder="请输入搜索内容.." type="text" />
+                        <span class="input-group-btn">
+                            <button style="float:right;margin-top: unset;" class="bt btn btn-default" type="submit" value="搜索" alt="Go!" title="Go!">Go!</button>
+                            <input name="Logo" value="Logo" type="hidden" />
+                        </span>
+                    </form>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div>
+
+
+        <div align="center">
+            <table class="table table-hover table-striped">
+                <tr>
+                    <td>图书ID</td>
+                    <td>书名</td>
+                    <td>isbn</td>
+                    <td>语言</td>
+                    <td>著者</td>
+                    <td>图书类别</td>
+                    <td>翻译</td>
+                </tr>
+                #foreach($book in $Data.Books)
+                <tr height="40px">
+                    <td>$book.BookId</td>
+                    <td>$book.BookName</td>
+                    <td>$book.isbs</td>
+                    <td>$book.language</td>
+                    <td>$book.Author</td>
+                    <td>$book.BooktypeName</td>
+                    <td>$book.Translator</td>
+                </tr>
+                #end
+            </table>
+        </div>
+
+        <!--<div class="result">
+            <table border="1" width="95%" align="center">
+                <tr height="40px">
+                    <td>图书ID</td>
+                    <td>书名</td>
+                    <td>isbn</td>
+                    <td>语言</td>
+                    <td>著者</td>
+                    <td>图书类别</td>
+                    <td>翻译</td>
+                </tr>
+                #foreach($book in $Data.Books)
+                <tr height="40px">
+                    <td>$book.BookId</td>
+                    <td>$book.BookName</td>
+                    <td>$book.isbs</td>
+                    <td>$book.language</td>
+                    <td>$book.Author</td>
+                    <td>$book.BooktypeName</td>
+                    <td>$book.Translator</td>
+                </tr>
+                #end
+            </table>-->
+            <!-- <div class="next">
+            #foreach($page in $Data.Fen)
+            <a href="$page.Href">$page.Title</a>
+            #end
+        </div>-->
+        </div>
+
+    </div>
+
+
+
+        <!--<div class="foot">
+            <div class="our"><p align="center"></p></div>
+        </div>-->
+
 </body>
 </html>
